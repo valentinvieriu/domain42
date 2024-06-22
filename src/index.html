@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Domain Availability Checker</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="gradient-bg min-h-screen flex justify-center items-center overflow-x-hidden">
+    <div class="container bg-white bg-opacity-80 dark:bg-gray-800 dark:bg-opacity-90 rounded-lg p-8 shadow-lg max-w-2xl w-11/12 m-5">
+        <h1 class="text-2xl font-bold text-center mb-6 text-gray-800 dark:text-gray-200">Advanced Domain Availability Checker</h1>
+        <form id="domain-form" class="space-y-4">
+            <div class="flex items-center space-x-2">
+                <div class="relative flex-grow">
+                    <input type="text" id="domain" name="domain" required placeholder="Enter domain name (without TLD)" class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-button-bg">
+                    <button type="button" id="reset" title="Clear" class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300 hidden">✕</button>
+                </div>
+                <button type="submit" class="bg-button-bg hover:bg-button-hover-bg text-white font-bold py-2 px-4 rounded transition duration-300">Check</button>
+            </div>
+            <div class="bg-white bg-opacity-50 dark:bg-gray-700 dark:bg-opacity-50 rounded-md p-4 space-y-2">
+                <div>
+                    <label class="inline-flex items-center">
+                        <input type="checkbox" id="popular-tlds" checked class="form-checkbox text-button-bg">
+                        <span class="ml-2 text-gray-700 dark:text-gray-300">Popular TLDs</span>
+                    </label>
+                </div>
+                <div>
+                    <label class="inline-flex items-center">
+                        <input type="checkbox" id="country-tlds" class="form-checkbox text-button-bg">
+                        <span class="ml-2 text-gray-700 dark:text-gray-300">Country TLDs</span>
+                    </label>
+                </div>
+                <div>
+                    <label class="inline-flex items-center">
+                        <input type="checkbox" id="custom-tlds" class="form-checkbox text-button-bg">
+                        <span class="ml-2 text-gray-700 dark:text-gray-300">Custom Modern TLDs</span>
+                    </label>
+                </div>
+            </div>
+        </form>
+        <div id="result" class="mt-6"></div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>
